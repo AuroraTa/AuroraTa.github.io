@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Aurora</title>
+      <title>前端 |  Aurora</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -47,70 +47,60 @@
         style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
       
     <main class="content on">
-      {% extends '_layout.swig' %}
-{% import '_macro/post-collapse.swig' as post_template with context %}
-{% import '_macro/sidebar.swig' as sidebar_template with context %}
+      <section class="outer">
+  
+  
+  <article class="articles">
+    
+    
+    <h1 class="page-type-title">前端</h1>
+    
+    
+  
+  
+  
+  
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2021" class="archive-year">2021</a>
+    </div>
+    <div class="archives">
+      
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2021/04/30/HTML%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  <time datetime="2021-04-30T14:17:30.158Z" itemprop="datePublished">04/30</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/2021/04/30/HTML%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0/"
+    >HTML简要学习</a> 
+</h2>
+ 
 
-{% block title %}{{ __('title.timeline') }} | {{ title }}{% endblock %}
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  </div>
 
-{% block class %}timeline{% endblock %}
-
-{% block content %}
-
-  {#####################}
-  {### ARCHIVE BLOCK ###}
-  {#####################}
-  <div class="post-block">
-    <div class="posts-collapse">
-
-    {%- set current_year = '1970' %}
-    <span itemprop="name"></span>
-    {%- for post in page.posts %}
-
-        {%- set year = date(post.date, 'YYYY') %}
-
-        {%- if year !== current_year %}
-            {%- set current_year = year %}
-            <div class="collection-year">
-            <span class="collection-header">{{ current_year }}</span>
-            </div>
-        {%- endif %}
-
-        <article itemscope itemtype="http://schema.org/Article">
-            <header class="post-header">
-
-            <div class="post-meta">
-                <time itemprop="dateCreated"
-                    datetime="{{ moment(post.date).format() }}"
-                    content="{{ date(post.date, config.date_format) }}">
-                {{ date(post.date, 'MM-DD') }}
-                </time>
-            </div>
-
-            <div class="post-title">
-               <span itemprop="name">{{ post.content }}</span>
-                
-            </div>
-
-            </header>
-    </article>
-
-    {%- endfor %}
-
+    
+    
+  </div>
+</article>
+      
+      
     </div>
   </div>
-  {#########################}
-  {### END ARCHIVE BLOCK ###}
-  {#########################}
+  
+  
 
-  {% include '_partials/pagination.swig' %}
-
-{% endblock %}
-
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
-
+  
+</section>
       <footer class="footer">
   <div class="outer">
     <ul>

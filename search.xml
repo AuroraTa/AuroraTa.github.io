@@ -19,7 +19,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>HTML</title>
+    <title>HTML简要学习</title>
     <url>/2021/04/30/HTML%E7%AE%80%E8%A6%81%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="一、第一章HTML简介"><a href="#一、第一章HTML简介" class="headerlink" title="一、第一章HTML简介"></a>一、第一章HTML简介</h1><h2 id="1-1、前端简介："><a href="#1-1、前端简介：" class="headerlink" title="1.1、前端简介："></a>1.1、前端简介：</h2><p>HTML用于控制网页<code>结构</code>，CSS用于控制网页<code>外观</code>，而JavaScript控制着网页的<code>行为</code>。</p>
 <h2 id="1-2、学习路线："><a href="#1-2、学习路线：" class="headerlink" title="1.2、学习路线："></a>1.2、学习路线：</h2><p>HTML——&gt;CSS——&gt;JavaScript——&gt;jQuery——&gt;HTML5——&gt;CSS3——&gt;移动web——&gt;Vue.js</p>
@@ -311,5 +311,11 @@
 <li>对PS、AI应该有所了解、掌握。<h1 id="七、超链接："><a href="#七、超链接：" class="headerlink" title="七、超链接："></a>七、超链接：</h1><h1 id="九、表单："><a href="#九、表单：" class="headerlink" title="九、表单："></a>九、表单：</h1></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
   </entry>
 </search>
