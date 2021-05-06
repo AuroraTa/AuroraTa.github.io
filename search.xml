@@ -301,10 +301,9 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>Java习题</title>
     <url>/2021/05/06/Java%E4%B9%A0%E9%A2%98/</url>
-    <content><![CDATA[<p>一、</p>
-<p>卡拉兹(Callatz)猜想：对任何一个正整数 <em>n</em>，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3<em>n</em>+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 <em>n</em>=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3<em>n</em>+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
+    <content><![CDATA[<h1 id="一、"><a href="#一、" class="headerlink" title="一、"></a>一、</h1><p>卡拉兹(Callatz)猜想：对任何一个正整数 <em>n</em>，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3<em>n</em>+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 <em>n</em>=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3<em>n</em>+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
 <p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 <em>n</em>，简单地数一下，需要多少步（砍几下）才能得到 <em>n</em>=1？</p>
 <h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>每个测试输入包含 1 个测试用例，即给出正整数 <em>n</em> 的值。</p>
 <h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出从 <em>n</em> 计算到 1 需要的步数。</p>
@@ -317,5 +316,11 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Collatzguess</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">callatz</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span> count)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (num &gt; <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (num % <span class="number">2</span> == <span class="number">1</span>)&#123;</span><br><span class="line">                num = (<span class="number">3</span> * num + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;<span class="keyword">if</span> (num % <span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">                num = num / <span class="number">2</span>;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">            <span class="keyword">int</span> num = input.nextInt();</span><br><span class="line">            System.out.println(callatz(num,count));</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;请输入正确的数！！！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
   </entry>
 </search>
