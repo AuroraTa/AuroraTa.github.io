@@ -245,9 +245,46 @@
 <td align="center">将字符串两端的多个空格去除</td>
 </tr>
 </tbody></table>
-<h1 id="Integer"><a href="#Integer" class="headerlink" title="Integer"></a>Integer</h1><blockquote>
-<p>Integer是引用类型<br>| 方法 | 说明 |<br>|:——–:|:————-:|<br>|Interger的进制转换功能：||<br>|nteger.toBinaryString(100) | 将十进制100转换为二进制|<br>|Integer.toOctalString(100) | 将十进制100转换为八进制|<br>| Integer.toHexString(100)|将十进制100转换为十六进制 |<br>| Integer.parseInt(“101”,2)|将二进制101转换为十进制 |<br>| 数据类型转换：| |<br>| String s = String.valueOf(int i)| int–&gt;String|<br>| int i = Integer.parseInt(s) | String–&gt;int|</p>
-</blockquote>
+<h1 id="引用类型Integer"><a href="#引用类型Integer" class="headerlink" title="引用类型Integer"></a>引用类型Integer</h1><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Interger的进制转换功能：</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">nteger.toBinaryString(100)</td>
+<td align="center">将十进制100转换为二进制</td>
+</tr>
+<tr>
+<td align="center">Integer.toOctalString(100)</td>
+<td align="center">将十进制100转换为八进制</td>
+</tr>
+<tr>
+<td align="center">Integer.toHexString(100)</td>
+<td align="center">将十进制100转换为十六进制</td>
+</tr>
+<tr>
+<td align="center">Integer.parseInt(“101”,2)</td>
+<td align="center">将二进制101转换为十进制</td>
+</tr>
+<tr>
+<td align="center">数据类型转换：</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">String s = String.valueOf(int i)</td>
+<td align="center">int–&gt;String</td>
+</tr>
+<tr>
+<td align="center">int i = Integer.parseInt(s)</td>
+<td align="center">String–&gt;int</td>
+</tr>
+</tbody></table>
 <h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">		BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">		String  str = br.readLine();</span><br><span class="line">		br.close();</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++) &#123;</span><br><span class="line">			sum +=  Integer.parseInt(str.substring(i,i+<span class="number">1</span>));</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		String string = String.valueOf(sum);</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;string.length();i++)&#123;</span><br><span class="line">		    	<span class="keyword">int</span> x = Integer.parseInt(string.substring(i, i+<span class="number">1</span>));</span><br><span class="line">		    	<span class="keyword">if</span>(x ==<span class="number">0</span>)</span><br><span class="line">		        System.out.print(<span class="string">&quot;ling&quot;</span>);</span><br><span class="line">		    	<span class="keyword">if</span>(x ==<span class="number">1</span>)</span><br><span class="line">		    		System.out.print(<span class="string">&quot;yi&quot;</span>);</span><br><span class="line">		    	<span class="keyword">if</span>(x ==<span class="number">2</span>)</span><br><span class="line">		    		System.out.print(<span class="string">&quot;er&quot;</span>);</span><br><span class="line">		    	<span class="keyword">if</span>(x ==<span class="number">3</span>)</span><br><span class="line">		    		System.out.print(<span class="string">&quot;san&quot;</span>);</span><br><span class="line">		    	<span class="keyword">if</span>(x ==<span class="number">4</span>)</span><br><span class="line">		    		System.out.print(<span class="string">&quot;si&quot;</span>);</span><br><span class="line">		    	<span class="keyword">if</span>(x ==<span class="number">5</span>)</span><br><span class="line">		    		System.out.print(<span class="string">&quot;wu&quot;</span>);</span><br><span class="line">		    	<span class="keyword">if</span>(x ==<span class="number">6</span>)</span><br><span class="line">		    		System.out.print(<span class="string">&quot;liu&quot;</span>);</span><br><span class="line">		     	<span class="keyword">if</span>(x ==<span class="number">7</span>)</span><br><span class="line">		     		System.out.print(<span class="string">&quot;qi&quot;</span>);</span><br><span class="line">		     	<span class="keyword">if</span>(x ==<span class="number">8</span>)</span><br><span class="line">		     		System.out.print(<span class="string">&quot;ba&quot;</span>);</span><br><span class="line">		     	<span class="keyword">if</span>(x ==<span class="number">9</span>)</span><br><span class="line">		     		System.out.print(<span class="string">&quot;jiu&quot;</span>);</span><br><span class="line">		      <span class="keyword">if</span>(i != string.length()-<span class="number">1</span>)</span><br><span class="line">		        System.out.print(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
